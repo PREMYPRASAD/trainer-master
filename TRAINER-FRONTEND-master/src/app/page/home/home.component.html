@@ -1,0 +1,33 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Counts </th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Location</th>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trainer of trainers; let i= index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{trainer.trainerName}}</td>
+                <td>{{trainer.trainerMobile}}</td>
+                <td>{{trainer.trainerEmail}}</td>
+                <td>{{trainer.trainerAddress}}</td>
+                <td>{{trainer.trainerOfflocation}}</td>
+                <td>{{trainer.trainerUsername}}</td>
+                <td>{{trainer.trainerPassword}}</td>
+                <td>
+                    <button type="submit" class="btn btn-primary m-1" (click)="navigatetoEdit(trainer._id)">Update</button>
+                    <button type="submit" (click)="deletetrainer(trainer._id)" class="btn btn-danger btn-sm p-2 ms-2">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

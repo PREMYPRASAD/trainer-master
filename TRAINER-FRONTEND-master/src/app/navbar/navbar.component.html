@@ -1,0 +1,18 @@
+<nav id="mainNavbar" class="navbar navbar-expand-sm navbar-light ">
+
+    <div class="fluid">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="collapsed = !this.collapsed">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div id="navbarSupportedContent" [ngClass]="{ collapse: collapsed, 'navbar-collapse': true }">
+
+            <ul class="navbar-nav ml-auto">
+                <a class="button" routerLink="/home">home</a>
+                <a class="button" routerLink="/addnew" routerLinkActive="active">AddTrainer</a>
+            </ul>
+        </div>
+    </div>
+
+</nav>
